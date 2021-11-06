@@ -1,0 +1,47 @@
+
+.search {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1500px;
+  padding: 15px;
+}
+
+.search__query {
+  background-color: rgba(12, 59, 90, 0.64);
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.search__queryInfo {
+  margin: 5px;
+}
+
+.search__queryLabel {
+  display: inline-block;
+  width: 130px;
+
+}
+
+.search__queryValue {
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.search__results {
+  /* padding-right: 60px; */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search__resultsCount {
+  margin: 5px 26px;
+  color: rgb(167, 167, 167);
+}
+
+.search__product {
+  max-width: 380px;
+  padding-right: 60px;
+}

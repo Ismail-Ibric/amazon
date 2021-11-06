@@ -1,0 +1,116 @@
+
+.payment:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 32px;
+  left: 0;
+  right: 0;
+  height: 240px;
+  background-color: #fff;
+  background-image: url("./img/longline_back.jpg");
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.payment__container > h1 {
+  text-align: center;
+  padding: 10px;
+  font-weight: 400;
+  background-color: rgba(231, 231, 231, 0.4);
+  border-bottom:  1px solid lightgray;
+}
+
+.payment__container > h1 > a {
+  text-decoration: none;
+}
+
+.payment__section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin: 0 20px;
+  border-bottom: 1px solid lightgray;
+}
+
+.payment__title {
+  flex: 0.2;
+  /* flex-grow: 0.2;
+  flex-shrink: 1;
+  flex-basis: 0%; */
+}
+
+.payment__address,
+.payment__items,
+.payment__details {
+  flex: 0.8;
+}
+
+.payment__addressContainer {
+  max-width: 280px;
+  min-width: 250px;
+  background-color: rgba(255,255,255,.7);
+  border-radius: 6px;
+  padding: 10px 15px;
+  margin: 0 30px;
+}
+
+.payment__itemsContainer {
+  min-width: 310px;
+  background-color: rgba(255,255,255,.7);
+  border-radius: 6px;
+  padding: 10px 15px;
+  margin: 0 30px;
+  box-shadow: rgba(23, 7, 59, .5) 0px 0px 10px;
+}
+
+.payment__detailsContainer {
+  max-width: 360px;
+  min-width: 250px;
+  background-color: rgba(255,255,255,.7);
+  border-radius: 6px;
+  padding: 10px 15px;
+  margin: 0 30px;
+  box-shadow: rgba(23, 7, 59, .5) 0px 0px 10px;
+}
+
+.payment__priceContainer > h3 {
+  margin-top: 15px;
+}
+
+.payment__buyNow {
+  background: #f0c14b;
+  border-radius: 4px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+  width: fit-content;
+  padding: 0px 40px;
+  cursor: pointer;
+}
+
+.payment__buyNow:hover:active {
+  transform: scale(1);
+}
+
+.payment__buyNow:hover {
+  transform: scale(1.02);
+}
+
+.payment__buyNow[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.payment__buyNow[disabled]:hover {
+  transform: scale(1);
+  cursor: not-allowed;
+}

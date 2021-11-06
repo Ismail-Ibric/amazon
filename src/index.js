@@ -1,17 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./page/App";
+import { StateProvider } from "./util/StateProvider";
+import reducer, { initialState } from "./util/reducer";
+
+const AppRef = React.forwardRef((props, ref) => (
+  <App ref={ref} {...props} />
+));
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <StateProvider initialState={initialState} reducer={reducer}>
+      <AppRef />
+    </StateProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// window.updateTopMostParent = (someValue) => {
+//   // Update state of topmost parent when this method is called 
+//   AppRef.current.setState({ someStateVariable: someValue }); 
+// };
+
+// window.refreshTopMostParent = () => {
+//   // Refresh state of topmost parent when this method is called
+//   AppRef.current.forceUpdate(); 
+// };

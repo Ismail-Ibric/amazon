@@ -1,0 +1,35 @@
+.footer {
+  padding: 10px;
+  display: flex;
+  font-size: 12px;
+  background-color: rgb(70, 70, 70);
+  padding: 40px 15px;
+  color: rgb(185, 185, 185);
+  display: flex;
+  justify-content: center;
+}
+
+.footer__title {
+  /* font-size: 11pt; */
+  font-weight: bold;
+}
+
+.footer ul {
+  padding: 5px;
+}
+
+.footer li {
+  /* margin-left: -20px; */
+  list-style: none;
+}
+
+.footer li a  {
+  /* margin-left: -20px; */
+  text-decoration: none;
+  color: rgb(136, 136, 136);
+  cursor: default;
+}
+
+.footer li a:hover  {
+  color: rgb(194, 185, 134);
+}

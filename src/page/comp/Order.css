@@ -1,0 +1,44 @@
+
+.order {
+  padding: 20px;
+  margin: 20px 0;
+  background-color: white;
+  border-radius: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  box-shadow: rgba(23, 7, 59, .6) 0px 0px 10px;
+}
+
+.order > h2 {
+  display: inline;
+  margin-right: 42px;
+}
+
+.order__amoutLabel {
+  margin-right: 10px;
+  align-self: flex-end;
+  margin-bottom: 2px;
+}
+
+.order__amount {
+  margin-right: 10px;
+  align-self: center;
+  align-self: flex-end;
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+
+.order__date {
+  width: 100%;
+  color: rgba(0,0,0,.3);
+}
+
+.order__id {
+  margin-left: auto;
+  color: rgba(0,0,0,.3);
+}
+
+.order .checkoutProduct {
+  width: 100%;
+}

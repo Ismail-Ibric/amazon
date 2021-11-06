@@ -1,0 +1,36 @@
+
+.home__catCont {
+  padding: 20px;
+  margin-top: -20px;
+}
+
+.home__catThumbCont {
+  display: inline-block;
+  padding-top: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: rgba(23, 7, 59, .5) 0px 0px 10px;
+}
+
+.home__catThumbCont:hover {
+  transform: scale(1.02);
+  background-color: rgb(253, 224, 161);
+}
+
+.home__catThumbCont:hover:active {
+  transform: scale(1);
+  background-color: rgb(228, 125, 41);
+}
+
+.home__catThumb {
+  border-radius: 10px;
+  cursor: pointer;
+  width: 140px;
+}
+
+.home__catsLoading {
+  margin-left: 20px;
+}

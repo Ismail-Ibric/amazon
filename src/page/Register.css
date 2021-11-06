@@ -1,0 +1,90 @@
+
+.register {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: white;
+  align-items: center;
+}
+
+.register__logo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  object-fit: contain;
+  width: 100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.register__container {
+  width: 300px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 1px solid lightgray;
+  background-color: rgb(255, 244, 212);
+  padding: 20px;
+}
+
+.register__container > h1 {
+  font-weight: 500;
+  margin-bottom: 20px;
+  align-self: center;
+}
+
+.register__container > .register__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register__container > .register__form > h5 {
+  margin-bottom: 5px;
+}
+
+.register__container > .register__form > input {
+  height: 30px;
+  margin-bottom: 10px;
+  background-color: white;
+  width: 98%;
+}
+
+.register__createAccButton {
+  background: #f0c14b;
+  border-radius: 4px;
+  width: fit-content;
+  height: 30px;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  font-weight: 600;
+  padding: 0 10px;
+  align-self: center;
+}
+
+.register__container > .register__form > p {
+  margin: 15px 0;
+  font-size: 12px;
+}
+
+.register__orLogin {
+  align-self: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+}
+
+.register__loginLink {
+  align-self: center;
+}
+
+.register__loginButton {
+  border-radius: 4px;
+  width: fit-content;
+  height: 30px;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: gray;
+  align-self: center;
+  padding: 0 15px;
+  background-color: rgb(255, 231, 164);
+}
