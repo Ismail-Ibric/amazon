@@ -15,5 +15,5 @@ Frameworks/Libraries used
 - Firebase
   -
   - Login Auth
-  - Forestore DB
+  - Firestore DB
   - Google Functions API
