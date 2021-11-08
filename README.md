@@ -18,8 +18,8 @@ Frameworks/Libraries used are
   - Search for products in one/all categories
   - Managing state using React Context/Reducer instead of Redux
   - Axios for Rest API calls
+  - Firebase
+    - Authenticate(User) for Login
+    - Firestore(DB) for Products
   - Endpoint routing with React Router DOM
   - Most icons used are from @Material-UI
-  - Firebase
-    - Authentication(User) for Login
-    - Firestore(DB) for Products
