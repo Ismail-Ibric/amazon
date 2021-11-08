@@ -15,6 +15,7 @@ Frameworks/Libraries used are
   - Rest API for credit card purchases with Stripe (dev mode)
 - React
   - 
+  - Search for products in one/all categories
   - Managing state using React Context/Reducer instead of Redux
   - Axios for Rest API calls
   - Endpoint routing with React Router DOM
