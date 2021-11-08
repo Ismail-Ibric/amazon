@@ -78,25 +78,25 @@ function HeaderNav() {
             <div className="header__optionLineTwo_Link"
               onClick={firebase_SignOut}>Log Out</div>
           ) : (
-            <Link to="/login">
+            <Link to="/login" onClick={() => setShowMenu(0)}>
               Log In
             </Link>
           )}
         </span>
       </div>
       <div className='header__option'>
-        <Link to="/orders">
+        <Link to="/orders" onClick={() => setShowMenu(0)}>
           <span className="header__optionLineOne">Returns &</span>
         </Link>
-        <Link to="/orders">
+        <Link to="/orders" onClick={() => setShowMenu(0)}>
           <span className="header__optionLineTwo">Orders</span>
         </Link>
       </div>
       <div className='header__option'>
-        <Link to="/prime">
+        <Link to="/prime" onClick={() => setShowMenu(0)}>
           <span className="header__optionLineOne">Your</span>
         </Link>
-        <Link to="/prime">
+        <Link to="/prime" onClick={() => setShowMenu(0)}>
           <span className="header__optionLineTwo">Prime</span>
         </Link>
       </div>

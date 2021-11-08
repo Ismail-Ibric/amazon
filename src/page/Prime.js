@@ -2,7 +2,7 @@ import "./Prime.css"
 
 function Prime() {
   return (
-    <div className="prime">
+    <div className="prime animFadeIn">
       <div className="prime__hero">
         <img className="prime__heroImage" src="https://images-na.ssl-images-amazon.com/images/G/01/marketing/prime/Acq/CrossSite/VXD-1193_non-prime_evergreen_echo_hero_1500x300_v5.jpg" alt="" />
       </div>

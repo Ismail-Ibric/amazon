@@ -28,10 +28,10 @@
 
 .product__image {
   max-height: 250px;
-  max-width: 300px;
-  width: 100%;
+  width: 300px;
   object-fit: scale-down;
   margin-bottom: 15px;
+  margin-top: 10px;
 }
 
 .product__AddToBasket {
@@ -85,4 +85,10 @@
 .basket-anim .product__StarIcon {
   opacity: 1;
   transition: all 1s ease-out;
+}
+
+@media only screen and (max-width: 720px) {
+  .product__image {
+    width: 100%;
+  }  
 }

@@ -292,14 +292,6 @@ function RestoreProducts() {
     },
     {
       guid: "heal-3",
-      title: "Goplus 2 in 1 Folding Treadmill w/ Dual Display, 2.25HP, for Home/Office",
-      img: "https://m.media-amazon.com/images/I/71GWOq1OWVL._AC_SL1500_.jpg",
-      price: 399.99,
-      rating: 4,
-      category: "Health",
-    },
-    {
-      guid: "heal-4",
       title: "KOMSURF Adjustable Dumbbell, 25/55 lb, for Men and Women, for Strength Training",
       img: "https://m.media-amazon.com/images/I/61EuGjMoDOS._AC_SL1500_.jpg",
       price: 72.99,
@@ -307,7 +299,7 @@ function RestoreProducts() {
       category: "Health",
     },
     {
-      guid: "heal-5",
+      guid: "heal-4",
       title: "Vitalitown Probiotics 120 Billion CFUs | Digestive & Immune Support | for Men Women",
       img: "https://m.media-amazon.com/images/I/71D5lJ6lJeL._AC_SL1500_.jpg",
       price: 18.49,
@@ -315,7 +307,7 @@ function RestoreProducts() {
       category: "Health",
     },
     {
-      guid: "heal-6",
+      guid: "heal-5",
       title: "Dove Original Clean Invisible Solid Deodorant, 2 Count",
       img: "https://m.media-amazon.com/images/I/61L0aVKDuxL._SL1500_.jpg",
       price: 9.89,
@@ -388,54 +380,93 @@ function RestoreProducts() {
     },
   ];
 
-  const addProductToFirestore = async (product) => {
+  // const addProductToFirestore = async (product) => {
 
-    db
-    .collection("products")
-    .add({
-      guid: product.guid,
-      cat: product.category,
-      title: product.title,
-      image: product.img,
-      price: product.price,
-      rating: product.rating,
-      date: Timestamp.fromDate(new Date())
-    }).then(function () {
-      console.log("Products successfully added to Firestore!");
-    })
-    .catch(function (error) {
-      console.error("Error adding Products to Firestore: ", error);
-    });
+  //   var addPromise;
 
-    await timeout(500);
-  };
+  //   addPromise = db
+  //   .collection("products")
+  //   .add({
+  //     guid: product.guid,
+  //     cat: product.category,
+  //     title: product.title,
+  //     image: product.img,
+  //     price: product.price,
+  //     rating: product.rating,
+  //     date: Timestamp.fromDate(new Date())
+  //   })
+    
+  //   addPromise.then(function () {
+  //     console.log("Product successfully added to Firestore!");
+  //   })
+  //   .catch(function (error) {
+  //     console.error("Error adding Product to Firestore: ", error);
+  //   });
 
-  const deleteAllDocsInProducts = () => {
-    db.collection('products').get()
-    .then(querySnapshot => {
-      querySnapshot.docs.forEach(snapshot => {
-          snapshot.ref.delete();
-      })
-      console.log("Products successfully deleted to Firestore!");
-    }).catch(function (error) {
-      console.error("Error deleting Productss on Firestore: ", error);
-    });
+  //   return addPromise;
+  // };
+
+
+  // const deleteAllDocsInProducts = () => {
+  //   db.collection('products').get()
+  //   .then( (querySnapshot) => {
+  //     querySnapshot.docs.forEach( async (snapshot) => {
+  //         await snapshot.ref.delete();
+  //     })
+  //     console.log("Products successfully deleted to Firestore!");
+  //   }).catch(function (error) {
+  //     console.error("Error deleting Productss on Firestore: ", error);
+  //   });
+  // }
+
+  // eslint-disable-next-line no-extend-native
+  Number.prototype.pad = function(size) {
+    var s = String(this);
+    while (s.length < (size || 2)) {s = "0" + s;}
+    return s;
   }
+
 
   const restoreAllProducts = async () => {
 
-    deleteAllDocsInProducts();
+    const docs = await db.collection('products').get();
+    let batch = db.batch();
 
-    await timeout(3000);
-
-    productsToRestore.map( (product, key) => {
-      return addProductToFirestore( product );
+    docs.forEach(doc => {
+        batch.delete(doc.ref);
     });
+    await batch.commit();
+
+
+    batch = db.batch();
+
+    productsToRestore.forEach((product, key) => {
+    
+      const doc = {
+        guid: product.guid,
+        cat: product.category,
+        title: product.title,
+        image: product.img,
+        price: product.price,
+        rating: product.rating,
+        date: Timestamp.fromDate(new Date())
+      }
+
+      const id = (key+1).pad(5);
+
+      batch.set( db.collection('products').doc(id), doc );
+    });
+
+    // Commit the batch
+    batch.commit().then(function () {
+        console.log( "batch Commit finished sucessfully" );
+    });
+
   }
 
-  const timeout = (delay) => {
-    return new Promise( res => setTimeout(res, delay) );
-  }
+  // const timeout = (delay) => {
+  //   return new Promise( res => setTimeout(res, delay) );
+  // }
 
   useEffect( () => {
 
@@ -443,7 +474,6 @@ function RestoreProducts() {
     .collection("products")
     .get()
     .then((querySnapshot) => {
-      console.log( "querySnapshot", querySnapshot );
       
       let arr = [];    
       querySnapshot.docs.map((doc) => {
@@ -453,8 +483,6 @@ function RestoreProducts() {
       setProducts(arr);
     });
   }, []);
-
-  console.log( user );
 
   return (
     <div className="restore">
