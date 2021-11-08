@@ -11,7 +11,11 @@ Login with user: `demo@demo.com` and password: `demo123`
 Frameworks/Libraries used
 - React
   - 
+  - Credit card purchases processed with Stripe (dev mode)
   - Managing state using React Context/Reducer instead of Redux
+  - Axios for REST API calls
+  - Endpoint routing with React Router DOM
+  - Most icons used are from @Material-UI
 - Firebase
   -
   - Login Auth
