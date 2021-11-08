@@ -20,5 +20,5 @@ Frameworks/Libraries used are
   - Endpoint routing with React Router DOM
   - Most icons used are from @Material-UI
   - Firebase
-    - Authentication(API) for Login
+    - Authentication(User) for Login
     - Firestore(DB) for Products
