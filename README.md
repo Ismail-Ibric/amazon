@@ -11,9 +11,9 @@ Login with user: `demo@demo.com` and password: `demo123`
 Frameworks/Libraries used
 - React
   - 
-  - React Context/Reducer in place of Redux to manage state
+  - Managing state using React Context/Reducer instead of Redux
 - Firebase
   -
   - Login Auth
   - Forestore DB
-  - Firebase Functions API
+  - Google Functions API
