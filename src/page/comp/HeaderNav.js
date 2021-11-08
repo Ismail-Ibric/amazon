@@ -93,8 +93,12 @@ function HeaderNav() {
         </Link>
       </div>
       <div className='header__option'>
-        <span className="header__optionLineOne">Your</span>
-        <span className="header__optionLineTwo">Prime</span>
+        <Link to="/prime">
+          <span className="header__optionLineOne">Your</span>
+        </Link>
+        <Link to="/prime">
+          <span className="header__optionLineTwo">Prime</span>
+        </Link>
       </div>
     </Fragment>
   );

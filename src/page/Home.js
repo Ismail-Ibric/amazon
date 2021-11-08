@@ -2,11 +2,9 @@ import React from "react";
 import "./Home.css";
 import Categories from "./comp/Categories"
 import Featured from "./comp/Featured"
+import { Link } from "react-router-dom"
 
 function Home() {
-
-
-
   return (
     <div>
       <div className="home__banner animFadeIn">
@@ -18,10 +16,14 @@ function Home() {
       </div>
       <div className="home__dealsCont animFadeIn">
         <div className="home__bannerImage2Cont grow">
-          <img src="/thumb/shopdeals.png" className="home__bannerImage2" alt="Many Deals"/>
+          <Link to="/search">
+            <img src="/thumb/shopdeals.png" className="home__bannerImage2" alt="Many Deals"/>
+          </Link>
         </div>
         <div className="home__bannerImage2Cont grow">
-          <img src="/thumb/holiday_01.jpg" className="home__bannerImage2" alt="Great Deals for the Holiday"/>
+          <Link to="/search">
+            <img src="/thumb/holiday_01.jpg" className="home__bannerImage2" alt="Great Deals for the Holiday"/>
+          </Link>
         </div>
       </div>
       <div className="home animFadeIn">

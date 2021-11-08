@@ -2,3 +2,29 @@
 .restore {
   padding: 20px;
 }
+
+.restore__onFirestore {
+  padding: 10px;
+  font-weight: 600;
+}
+
+.restore__product {
+  margin: 4px 0px;
+}
+
+.restore__product > li {
+  margin-left: -20px;
+}
+
+.restore__product span.title {
+  font-style: italic;
+  margin-right: 8px;
+  color: rgb(78, 122, 108);
+}
+
+.restore__product span.category {
+  font-style: italic;
+  font-weight: 600;
+  margin-left: 4px;
+  color: rgb(146, 50, 50);
+}

@@ -12,6 +12,7 @@ import Register from "./Register";
 import Payment from "./Payment"
 import Orders from "./Orders"
 import Search from "./Search"
+import Prime from "./Prime"
 import RestoreProducts from "./admin/RestoreProducts"
 import { auth } from "../util/firebaseAuth";
 import { loadStripe } from "@stripe/stripe-js";
@@ -87,6 +88,11 @@ function App() {
           <Route path="/orders">
             <Header />
             <Orders />
+            <Footer />
+          </Route>
+          <Route path="/prime">
+            <Header />
+            <Prime />
             <Footer />
           </Route>
           <Route path="/admin/restoreproducts">

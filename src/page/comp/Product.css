@@ -28,6 +28,7 @@
 
 .product__image {
   max-height: 250px;
+  max-width: 300px;
   width: 100%;
   object-fit: scale-down;
   margin-bottom: 15px;

@@ -114,3 +114,8 @@
   transform: scale(1);
   cursor: not-allowed;
 }
+
+.payment__logIn {
+  color: red;
+  margin: 0 10px;
+}

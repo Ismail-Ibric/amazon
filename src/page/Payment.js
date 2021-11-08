@@ -147,7 +147,7 @@ function Payment() {
                       <h3>Order Total: {value}</h3>
                     )}
                   />
-                  { (processing || disabled || succeeded || getBasketTotal(basket) === 0) ?
+                  { (!user || processing || disabled || succeeded || getBasketTotal(basket) === 0) ?
                     <button disabled className="payment__buyNow">
                       <span>Buy Now</span>
                     </button>
@@ -155,6 +155,8 @@ function Payment() {
                     <button className="payment__buyNow">
                       <span>Buy Now</span>
                     </button>
+                  }
+                  {!user && <span className="payment__logIn">Please <Link to="/login">LogIn</Link></span>
                   }
                 </div>
                 { error && <div>{error}</div> }

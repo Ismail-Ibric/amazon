@@ -1,0 +1,53 @@
+.prime {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1500px;
+  padding-bottom: 15px;
+  background-color: white;
+}
+
+.prime__hero {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.prime__heroImage {
+  max-width: 1500px;
+  margin: auto;
+  display: block;
+}
+
+.prime__heroExtended {
+  display: flex;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 22pt;
+  padding: 10px;
+}
+
+.prime__heroExtended > div {
+  max-width: 1000px;
+}
+
+.prime__body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.prime__body > img {
+  max-width: 320px;
+}
+
+@media only screen and (max-width: 740px) {
+  .prime__heroImage {
+    max-width: 740px;
+  }
+
+  .prime__heroExtended {
+    font-size: 12pt;
+  }
+
+}
