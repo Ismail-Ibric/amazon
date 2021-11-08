@@ -8,16 +8,17 @@ Login with user: `demo@demo.com` and password: `demo123`
 
 ## Details
 
-Frameworks/Libraries used
+Frameworks/Libraries used are
+- Node.js
+  -
+  - Google Functions API
+  - Rest API for credit card purchases with Stripe (dev mode)
 - React
   - 
-  - Credit card purchases processed with Stripe (dev mode)
   - Managing state using React Context/Reducer instead of Redux
-  - Axios for REST API calls
+  - Axios for Rest API calls
   - Endpoint routing with React Router DOM
   - Most icons used are from @Material-UI
-- Firebase
-  -
-  - Login Auth
-  - Firestore DB
-  - Google Functions API
+  - Firebase
+    - Authentication(API) for Login
+    - Firestore(DB) for Products
